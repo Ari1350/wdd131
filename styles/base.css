@@ -19,13 +19,14 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
 nav ul li a {
     color: rgb(2, 2, 2);
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #027553;
+    text-decoration: underline;
 }
 
 main {
