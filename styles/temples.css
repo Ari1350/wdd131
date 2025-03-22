@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-  
+ 
 header {
     background: #00fff2;
     color: white;
@@ -44,7 +44,7 @@ main {
   
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 2rem;
 }

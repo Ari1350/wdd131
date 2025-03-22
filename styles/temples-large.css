@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+}
 .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -11,3 +17,13 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+@media (min-width: 1024px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
