@@ -1,29 +1,25 @@
 @media (min-width: 768px) {
     nav ul {
-      flex-direction: row;
-      justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-around;
     }
-}
-.gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-  
-footer {
-    text-align: center;
-    padding: 1rem;
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 1024px) {
     body {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .gallery {
-      grid-template-columns: repeat(4, 1fr); 
+        grid-template-columns: repeat(3, 1fr); 
     }
-  }
+}
