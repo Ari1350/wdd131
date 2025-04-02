@@ -96,3 +96,10 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .data, .weather {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
