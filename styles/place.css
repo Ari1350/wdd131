@@ -4,12 +4,12 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #fff8e7;
-    color: #333;
+    background-color: #333;
 }
 
 header {
     background-color: #8c5400;
-    color: white;
+    background-color: white;
     text-align: center;
     padding: 2em;
     font-family: 'Poiret One', cursive;
@@ -58,6 +58,14 @@ main {
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.weather-icon {
+    width: 55px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
 
 h1 {
     margin: 0;
