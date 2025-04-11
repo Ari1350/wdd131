@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const d = new Date();
+    document.getElementById("currentYear").innerHTML;
+    document.querySelector("#last-modified").textContent = `Last Modification: ${document.lastModified}`;
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
         { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -15,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
         option.textContent = product.name;
         productSelect.appendChild(option);
     });
+});
 });

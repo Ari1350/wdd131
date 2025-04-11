@@ -169,4 +169,4 @@ function createTempleCard(filteredTemple) {
 
       document.querySelector(".gallery").appendChild(card);
     });
- }
+}
