@@ -99,10 +99,14 @@ const temples = [
 createTempleCard(temples);
 
 const nonboliviaLink = document.querySelector("#nonbolivia");
-
-nonboliviaLink.addEventListener("click", ()=>{
-    createTempleCard(temples.filter(temple => !temple.location.includes("Bolivia")));
+if (nonboliviaLink) {
+  document.querySelector("#nonbolivia").addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => !temple.location.toLowerCase().includes("bolivia"));
+    createTempleCard(filteredTemples);
 });
+  } else {
+    console.error("Element with ID #nonbolivia not found.");
+}
 
 function createTempleCard(filteredTemple){
     document.querySelector(".gallery").innerHTML ="";
