@@ -1,18 +1,14 @@
-let d = new Date();
-    document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
-    document.querySelector("#last-modified").textContent = `Last Modification: ${document.lastModified}`;
+document.addEventListener("DOMContentLoaded", () => {
+  const d = new Date();
+  document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
+  document.querySelector("#last-modified").textContent = `Last Modification: ${document.lastModified}`;
 
-const hambutton = document.querySelector(`#hambutton`);
-
-hambutton.addEventListener(`click`, () => {
-    document.querySelector('h1').classList.toggle('show');
-    document.querySelector('#navmenu').classList.toggle('show');
-    hambutton.classList.toggle('show');
-})
-
-function toggleActivate(element){
-    element.classList.toggle("activate");
-}
+  const hambutton = document.querySelector("#hambutton");
+  hambutton.addEventListener("click", () => {
+      document.querySelector("h1").classList.toggle("show");
+      document.querySelector("#navmenu").classList.toggle("show");
+      hambutton.classList.toggle("show");
+  });
 
 const temples = [
     {
@@ -96,20 +92,26 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/bogota-colombia-temple/bogota-colombia-temple-7733-main.jpg"
       },
   ];
+
 createTempleCard(temples);
 
 const nonboliviaLink = document.querySelector("#nonbolivia");
-if (nonboliviaLink) {
-  document.querySelector("#nonbolivia").addEventListener("click", () => {
-    const filteredTemples = temples.filter(temple => !temple.location.toLowerCase().includes("bolivia"));
-    createTempleCard(filteredTemples);
-});
-  } else {
-    console.error("Element with ID #nonbolivia not found.");
-}
+    if (nonboliviaLink) {
+        nonboliviaLink.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            const filteredTemples = temples.filter(temple =>
+                !temple.location.toLowerCase().includes("bolivia")
+            );
+            createTempleCard(filteredTemples);
+        });
+    } else {
+        console.error("Element with ID #nonbolivia not found.");
+    }
 
-function createTempleCard(filteredTemple){
-    document.querySelector(".gallery").innerHTML ="";
+function createTempleCard(filteredTemple) {
+      const gallery = document.querySelector(".gallery");
+      gallery.innerHTML = "";
+
     filteredTemple.forEach(temple => {
       let card = document.createElement("section");
       let name = document.createElement("h3");
@@ -134,4 +136,5 @@ function createTempleCard(filteredTemple){
 
       document.querySelector(".gallery").appendChild(card);
     });
-}
+ }
+});
