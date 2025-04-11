@@ -108,6 +108,39 @@ const nonboliviaLink = document.querySelector("#nonbolivia");
         console.error("Element with ID #nonbolivia not found.");
     }
 
+const newLink = document.querySelector("#new");
+    if (newLink) {
+        newLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            const filteredTemples = temples.filter(temple => {
+                const year = parseInt(temple.dedicated.split(",")[0]);
+                return year > 2000;
+            });
+            createTempleCard(filteredTemples);
+        });
+    }
+
+
+const largeLink = document.querySelector("#large");
+    if (largeLink) {
+        largeLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            const filteredTemples = temples.filter(temple => temple.area > 50000);
+            createTempleCard(filteredTemples);
+        });
+    }
+
+
+const smallLink = document.querySelector("#small");
+    if (smallLink) {
+        smallLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            const filteredTemples = temples.filter(temple => temple.area <= 50000);
+            createTempleCard(filteredTemples);
+        });
+    }
+});
+
 function createTempleCard(filteredTemple) {
       const gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
@@ -137,4 +170,3 @@ function createTempleCard(filteredTemple) {
       document.querySelector(".gallery").appendChild(card);
     });
  }
-});
