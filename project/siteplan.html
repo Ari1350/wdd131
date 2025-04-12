@@ -7,7 +7,8 @@
     <meta name="author" content="Guadalupe Arias">
     <link rel="stylesheet" href="styles/siteplan.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
-</head>
+    <script defer src="scripts/siteplan.js"></script>
+  </head>
 <body>
     <header>
         <img src="images/Logo (2).webp" alt="Logo">
@@ -38,18 +39,38 @@
   <section id="flowers">
     <h2>Example Flowers</h2>
     <div class="card">
-      <h3>Kantuta</h3>
-      <p>Symbol of unity. One of Bolivia’s national flowers.</p>
+      <img src="images/Kantuta.webp" alt="Kantuta Flower" loading="lazy">
+                <div>
+                    <h3>Kantuta</h3>
+                    <p>Symbol of unity. One of Bolivia’s national flowers.</p>
+                </div>
     </div>
     <div class="card">
-      <h3>Patujú</h3>
-      <p>Represents the eastern region of Bolivia. National flower.</p>
+      <img src="images/patuju.webp" alt="Patujú Flower" loading="lazy">
+                <div>
+                    <h3>Patujú</h3>
+                    <p>Represents the eastern region of Bolivia. National flower.</p>
+                </div>
     </div>
     <div class="card">
-      <h3>Achira</h3>
-      <p>Used in traditional medicine and culture.</p>
+      <img src="images/achira.webp" alt="Achira Flower" loading="lazy">
+                <div>
+                    <h3>Achira</h3>
+                    <p>Used in traditional medicine and culture.</p>
+                </div>
     </div>
   </section>
+</section>
+<section id="contact" aria-label="Contact Us">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
   <footer>
     <p>©2025 🌸 Guadalupe Arias 🌸 Bolivian Flowers</p>
   </footer>
